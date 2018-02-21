@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-sm-6">
+
+        <div class="card">
+            <div class="card-header">
+                <small>Add a new</small>
+                <strong>Medication</strong>
+            </div>
+            <div class="card-body">
+			<div class="form-group">
+                    <label for="street">Medication</label>
+                    <input type="text" class="form-control" ng-model="medication.medication" placeholder="">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Prescribing Doctor</label>
+                    <input type="text" class="form-control" ng-model="medication.prescriber" placeholder="">
+                </div>
+
+                <div class="form-group">
+                    <label for="street">Dosage</label>
+                    <input type="text" class="form-control" ng-model="medication.dose" placeholder="">
+                </div>
+
+
+                <button ng-click="createMedication()" type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                <button type="reset" ng-click="reset('medication')" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">
+                <strong>Medications</strong>
+                <span class="badge badge-pill badge-danger float-right">{{medicationRecords.length}}</span>
+            </div>
+            <div ng-repeat="medication in medications">
+                <div class="card-body">
+                    <div>
+                        Medication: {{medication.medication}}
+                    </div>
+                    <div>
+                        Administered By: {{medication.prescriber}}
+                    </div>
+                    <div>
+                        Dose: {{medication.dose}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
