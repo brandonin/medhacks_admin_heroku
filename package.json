@@ -6,7 +6,7 @@
   "dependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "browser-sync": "^2.16.0",
+    "browser-sync": "^2.16.0"
   },
   "devDependencies": {
     "browser-sync": "^2.16.0",
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm i browser-sync --save && gulp serve"
+    "start": "gulp serve"
   },
   "author": "Łukasz Holeczek",
   "url": "http://coreui.io",
